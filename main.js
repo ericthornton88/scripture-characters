@@ -10,6 +10,7 @@ var characters = {
             Alma: "Had a wicked son that became righteous after an angel appeared to him"
           }
 $(function() {
+  var streak = 0
   for (var character in characters) {
     $('#character-name').prepend('<p>' + character + '</p>')
     $('#character-info').prepend('<p>' + characters[character] + '</p>')
@@ -25,18 +26,16 @@ $(function() {
         if (characters[character] == desc) {
           var obj_key = character
           if (obj_key == $('p.active').text()) {
-            console.log('success');
             $('p.active').removeClass('active').addClass('success');
             $(this).addClass('success');
+            
           } else {
             $('p.active').removeClass('active')
-            console.log('fail');
+            streak = 0
           }
           break;
         }
       }
-
-
   })
 
 
