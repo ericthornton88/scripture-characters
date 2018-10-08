@@ -1,6 +1,6 @@
 var characters = {
             Nephi: "Had a good attitude and built a boat",
-            Lehi: "Had many sons and was a prophet in Jerusalem.",
+            Lehi: "Had many sons and was a prophet in Jerusalem",
             Moroni: "The last book in the Book of Mormon has his name",
             Laman: "Went back to get the gold plates and had a bad attitude",
             Samuel: "Stood on the wall to cry repentance to the people",
@@ -11,9 +11,10 @@ var characters = {
           }
 $(function() {
   var streak = 0
+
   for (var character in characters) {
     $('#character-name').prepend('<p>' + character + '</p>')
-    $('#character-info').prepend('<p>' + characters[character] + '</p>')
+    //$('#character-info').prepend('<p>' + characters[character] + '</p>')
   }
   $('#character-name p').on('click', function() {
     $('#character-name p').removeClass('active')
