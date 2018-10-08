@@ -28,10 +28,12 @@ $(function() {
           if (obj_key == $('p.active').text()) {
             $('p.active').removeClass('active').addClass('success');
             $(this).addClass('success');
-            
+            streak += 1
+            $('.streak h3').text('Streak: ' + streak)
           } else {
             $('p.active').removeClass('active')
             streak = 0
+            $('.streak h3').text('Streak: ' + streak)
           }
           break;
         }
